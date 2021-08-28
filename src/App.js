@@ -9,10 +9,14 @@ const App = () => {
     { id: 'e4', title: 'New Desk (Wooden)', amount: 450, date: new Date(2021, 5, 12) }
   ];
 
+  const addExpenseHandler = (newExpense) => {
+    console.log(newExpense);
+  };
+
   return (
     <div>
       <h2>Expenses</h2>
-      <NewExpense />
+      <NewExpense onAddExpense={addExpenseHandler}/>
       <Expenses expenses={expenses}/>
     </div>
   );
